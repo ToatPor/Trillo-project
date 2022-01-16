@@ -1,0 +1,21 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+ "compils:sass": "node-sass sass/mains css/style.comp.css",
+"prefix:css":"postcss -use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+"compress:css": "node-sass css/style.prefix.css  css/style.css --output-style compressed",
+"build:css": "npm-run-all compils:sass prefix:css compress:css"
+
+  },
+  "keywords": [
+    "trillo"
+  ],
+  "author": "toat",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
